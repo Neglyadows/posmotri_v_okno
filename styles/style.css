@@ -56,7 +56,16 @@ ol {
 
 /*видево*/
 .result__video {
-  width: 100%;
+  object-position: center;
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+
+.result__video-container {
+  position: relative;
+  width: inherit;
+  height: inherit;
 }
 
 /*Формы + кнопка*/
@@ -73,10 +82,10 @@ ol {
 }
 
 .search-form__textfield {
-  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: inherit;
   font-size: 18px;
   font-weight: 400;
-  width: 224px;
+  min-width: 224px;
   color: white;
   background: none;
   outline: none;
@@ -86,9 +95,15 @@ ol {
   appearance: none;
 }
 
+.search-form__textfield:focus {
+  outline: none;
+}
+
 .search-form__label {
   display: flex;
   gap: 5px;
+  align-items: center;
+  cursor: pointer;
 }
 
 ::placeholder {
@@ -132,15 +147,13 @@ ol {
   background-color: white;
 }
 
-.search-form__label:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-
 .search-form__label:has(:focus-visible) {
   outline: 1px solid white;
   outline-offset: 2px;
+}
+
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
 }
 
 .search-form__submit-button {
@@ -192,10 +205,19 @@ ol {
 .content__card-link {
   text-decoration: none;
   color: white;
+  margin: 2px;
+  display: block;
 }
 
 .content__video-card {
   display: flex;
+}
+
+.content__video-card-description-container {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 0;
+  max-width: 200px;
 }
 
 .content__video-card-title {
@@ -204,6 +226,9 @@ ol {
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-description {
@@ -228,14 +253,20 @@ ol {
 
 .content__card-link:active {
   background: #545050;
+  text-decoration: none;
 }
 
+.content__card-link_current {
+  background: #545050;
+}
 
 /*картинка к видево*/
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
   margin-left: auto;
+  object-fit: cover;
+  object-position: center;
 }
 
 /*кнопка "показать ещё"*/
@@ -257,6 +288,7 @@ ol {
 
 .button:active {
   background: #545050;
+  text-decoration: none;
 }
 
 .button:hover {
