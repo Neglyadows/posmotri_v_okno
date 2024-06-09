@@ -55,17 +55,18 @@ ol {
 }
 
 /*видево*/
+.result__video-container {
+  position: relative;
+  width: inherit;
+  height: inherit;
+  height: 386px;
+}
+
 .result__video {
   object-position: center;
   width: inherit;
   height: inherit;
   object-fit: cover;
-}
-
-.result__video-container {
-  position: relative;
-  width: inherit;
-  height: inherit;
 }
 
 /*Формы + кнопка*/
@@ -167,7 +168,7 @@ ol {
   width: 399px;
   flex-direction: column;
   justify-content: start;
-  gap: 26px;
+  gap: 21px;
 }
 
 /*посмотри в окно*/
@@ -260,7 +261,7 @@ ol {
   background: #545050;
 }
 
-/*картинка к видево*/
+/*картинка к видео*/
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
@@ -269,7 +270,7 @@ ol {
   object-position: center;
 }
 
-/*кнопка "показать ещё"*/
+/*кнопка "показать ещe"*/
 .more-button {
   width: 100%;
 }
